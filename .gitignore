@@ -1,4 +1,6 @@
 .svn
+target
 log.txt
 mavenBuild.bat
-target
+.idea
+*.iml
