@@ -12,9 +12,9 @@ public class DefinitionSteps {
     @Steps
     EndUserSteps endUser;
 
-    @Given("the user is on the Wikionary home page")
-    public void givenTheUserIsOnTheWikionaryHomePage() {
-        endUser.is_the_home_page();
+    @Given("the user is on the google translate page")
+    public void givenTheUserIsOnTheGoogleTranslatePage() {
+        endUser.is_required_page();
     }
 
     @When("the user looks up the definition of the word '$word'")
