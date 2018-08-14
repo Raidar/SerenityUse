@@ -13,18 +13,18 @@ public class EndUserSteps {
 
     @Step
     public void enters(String keyword) {
-        googleTranslatePage.enter_keywords(keyword);
+        googleTranslatePage.enter_text(keyword);
     }
 
     @Step
     public void starts_search() {
-        googleTranslatePage.lookup_terms();
+        googleTranslatePage.translate_text();
     }
 
     @Step
     public void should_see_definition(String definition) {
         // TODO: Realize.
-        //assertThat(googleTranslatePage.getDefinitions(), hasItem(containsString(definition)));
+        assertThat(googleTranslatePage.getDefinitions(), hasItem(containsString(definition)));
     }
 
     @Step

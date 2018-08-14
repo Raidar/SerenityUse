@@ -17,23 +17,30 @@ public class GoogleTranslatePage extends PageObject {
 	@FindBy(id="source")
 	private WebElementFacade sourceArea;
 
-	@FindBy(name="gt-submit")
-	private WebElementFacade translateButton;
+	//@FindBy(id="gt-src-is")
+	//private WebElementFacade sourceList;
 
-	public void enter_keywords(String keyword) {
-		sourceArea.type(keyword);
+	//@FindBy(id="contribute-target")
+	//private WebElementFacade destinArea;
+
+	//@FindBy(name="gt-submit")
+	//private WebElementFacade translateButton;
+
+	public void enter_text(String word) {
+		//sourceArea.type(word);
+		sourceArea.typeAndEnter(word);
+		//sourceList.clear();
+		//destinArea.setWindowFocus();
 	}
 
-	public void lookup_terms() {
-		translateButton.click();
+	public void translate_text() {
+		//translateButton.click();
 	}
 
 	public List<String> getDefinitions() {
-		return null;
-
-		//WebElementFacade definitionList = find(By.tagName("ol"));
-		//return definitionList.findElements(By.tagName("li")).stream()
-		//        .map( element -> element.getText() )
-		//        .collect(Collectors.toList());
+		WebElementFacade definitionList = find(By.className("gt-def-list"));
+		return definitionList.findElements(By.className("gt-def-row")).stream()
+		        .map( element -> element.getText() )
+		        .collect(Collectors.toList());
 	}
 }
