@@ -15,9 +15,6 @@
         <serenity.version>1.8.3</serenity.version>
         <serenity.jbehave.version>1.34.0</serenity.jbehave.version>
         <webdriver.driver>chrome</webdriver.driver>
-        <!--<webdriver.chrome.driver>ChromeDriver.exe</webdriver.chrome.driver>-->
-        <!--<webdriver.driver>iexplorer</webdriver.driver>-->
-        <!--<webdriver.ie.driver>IEDriverServer.exe</webdriver.ie.driver>-->
         <serenity.properties>./serenity.properties</serenity.properties>
     </properties>
 
