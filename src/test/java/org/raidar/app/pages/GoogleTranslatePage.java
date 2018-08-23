@@ -11,7 +11,7 @@ import net.thucydides.core.pages.PageObject;
 
 import java.util.List;
 
-@DefaultUrl("https://translate.google.com/?hl=ru")
+@DefaultUrl("https://translate.google.ru/#en/ru/")
 public class GoogleTranslatePage extends PageObject {
 
 	@FindBy(id="source")
